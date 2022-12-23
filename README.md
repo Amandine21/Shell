@@ -4,7 +4,10 @@
 a variety of situations. When designing this terminal the starter code provided two classes, the
 tokenizer and command class was used to implement the Shell.cpp. The tokenizer class is
 used to tokenize the input into a vector made out of the Command pointer objects. The
-Command class is used to store information about the commands being passed into the input.\
+Command class is used to store information about the commands being passed into the input.
+    </p>
+
+    \
     When designing the shell the first thing that was necessary was to address the output of
 the prompt for the user. The getenv() system call was used to get the username, the time()
 function was used to get the current time the system was recording, and the getcwd() was used
@@ -50,4 +53,3 @@ pipe will be closed and dup2() will be used to give the read end of the process 
 input. Finally, if the loop is at the last command it will commit a waitpid(), if not it will append the
 command to the background process. Finally, a temporary variable will be used to reset the file
 descriptors which used the dup() system call with respect to the standard read
-</p>
