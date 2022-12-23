@@ -6,8 +6,6 @@ tokenizer and command class was used to implement the Shell.cpp. The tokenizer c
 used to tokenize the input into a vector made out of the Command pointer objects. The
 Command class is used to store information about the commands being passed into the input.
     </p>
-
-    \
     When designing the shell the first thing that was necessary was to address the output of
 the prompt for the user. The getenv() system call was used to get the username, the time()
 function was used to get the current time the system was recording, and the getcwd() was used
