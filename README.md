@@ -1,11 +1,11 @@
 # Shell
 
-  +The purpose of this assignment is to create a terminal that could run bash commands in
+ >The purpose of this assignment is to create a terminal that could run bash commands in
 a variety of situations. When designing this terminal the starter code provided two classes, the
 tokenizer and command class was used to implement the Shell.cpp. The tokenizer class is
 used to tokenize the input into a vector made out of the Command pointer objects. The
 Command class is used to store information about the commands being passed into the input.\
-  +When designing the shell the first thing that was necessary was to address the output of
+>When designing the shell the first thing that was necessary was to address the output of
 the prompt for the user. The getenv() system call was used to get the username, the time()
 function was used to get the current time the system was recording, and the getcwd() was used
 to get the current working directory where the user was located. The prompt was then output to
