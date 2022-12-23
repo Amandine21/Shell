@@ -1,16 +1,16 @@
 # Shell
 
-&nbsp;&nbsp;The purpose of this assignment is to create a terminal that could run bash commands in
+ &nbsp;The purpose of this assignment is to create a terminal that could run bash commands in
 a variety of situations. When designing this terminal the starter code provided two classes, the
 tokenizer and command class was used to implement the Shell.cpp. The tokenizer class is
 used to tokenize the input into a vector made out of the Command pointer objects. The
 Command class is used to store information about the commands being passed into the input.\
- When designing the shell the first thing that was necessary was to address the output of
+ &nbsp;When designing the shell the first thing that was necessary was to address the output of
 the prompt for the user. The getenv() system call was used to get the username, the time()
 function was used to get the current time the system was recording, and the getcwd() was used
 to get the current working directory where the user was located. The prompt was then output to
 display in order the time, username, and current directory\ 
-  The whole shell program operated in an infinite for loop which will run until the user
+&nbsp;The whole shell program operated in an infinite for loop which will run until the user
 typed the “exit” command. The loop waited for the user to type in an input using the getline()
 function which will store the input into a string. A tokenizer object was created to tokenize the
 input, and there was an error check associated with it. Following that, the background
@@ -18,7 +18,7 @@ processes will be checked in a for loop using iterators to traverse a vector hol
 IDs to see if there are any child processes that are finished using the waitpid() system call. The
 system call will be used in a nonblocking fashion, and If there is a process that is finished it will
 erase the process from the vector.\
-  After that, the cd or change directory cases were addressed in an if statement. If the first
+  &nbsp;After that, the cd or change directory cases were addressed in an if statement. If the first
 command in the vector from the tokenizer object was a “cd” a function will be executed defined
 outside of the main. The function will take in the arguments following the cd, an empty character
 array representing the previous working directory, and the function will contain three conditions.
@@ -27,14 +27,14 @@ the current directory will remain the same. The second condition will check to s
 being passed is a “-”, and if it is it will navigate to the previous directory using the chdir() system
 call. The final condition will change the directory to whatever the user has passed using the
 chdir() system call, and will store the return value into an integer to check for an error.\
-  Following the cd cases, the input/output redirection will be addressed by checking if the
+  &nbsp;Following the cd cases, the input/output redirection will be addressed by checking if the
 current command is passed as an input or output using member functions from the command
 class. If any of these cases are true, there will be a series of independent if statements that will
 execute functions defined outside of the main function. These functions will address the file
 descriptors by opening the file with a series of flags and depending on if it's a read or write file
 descriptor the function will use the dup2() system call to switch the file descriptors, along with
 some error checks.\
-  Finally, this code was completed by piping meaning the prompt had the potential to run
+  &nbsp;Finally, this code was completed by piping meaning the prompt had the potential to run
 multiple processes which could transfer information to each other. The way the code was
 constructed was in an if-else statement nested within a for loop iterating through the passed
 commands. The child process ran the code mentioned above except the cd commands which
