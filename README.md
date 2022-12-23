@@ -1,6 +1,6 @@
 # Shell
 
-&emsp; The purpose of this assignment is to create a terminal that could run bash commands in
+&nbsp; &nbsp; The purpose of this assignment is to create a terminal that could run bash commands in
 a variety of situations. When designing this terminal the starter code provided two classes, the
 tokenizer and command class was used to implement the Shell.cpp. The tokenizer class is
 used to tokenize the input into a vector made out of the Command pointer objects. The
